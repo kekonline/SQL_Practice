@@ -10,9 +10,20 @@ alter table user add column sex varchar(1);
 
 alter table users modify age int(3);
 alter table user modify age varchar(3);
-alter table user modify last_name varchas (255);
+alter table user modify last_name varchar(255);
 alter table user modify sex varchar(45);
 
 alter table user rename column sex to gender;
 alter table user rename column last_name to lastname;
 alter table user rename column age to age1;
+
+
+alter table user add column age int(3)
+alter table user add column name varchar(45)
+alter table modify name varchas(45)
+alter table modify tag JSON;
+
+alter table user rename colum tag to tags;
+
+alter table user rename column tag to tags;
+
