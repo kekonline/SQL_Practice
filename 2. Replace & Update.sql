@@ -11,3 +11,7 @@ replace (id, name , age) values (1,2,3);
 update (age)values (22) where id = 1
 
 udate set age=30, name = "Tom" where id =1
+
+replace (id) valuses (1);
+
+upder user set age = 20, name = "Tom" where id = 1;
