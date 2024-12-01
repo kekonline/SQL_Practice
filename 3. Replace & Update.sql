@@ -10,8 +10,14 @@ update user set age =30 where id = 1;
 replace (id, name , age) values (1,2,3);
 update (age)values (22) where id = 1
 
-udate set age=30, name = "Tom" where id =1
+update set age=30, name = "Tom" where id =1
 
 replace (id) valuses (1);
 
-upder user set age = 20, name = "Tom" where id = 1;
+update user set age = 20, name = "Tom" where id = 1;
+
+replace (age) values (20) where id = 1;
+
+insert into user (id) values (1);
+replace into user (id) values (1);
+update user set id =1;

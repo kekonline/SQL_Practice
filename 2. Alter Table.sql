@@ -29,5 +29,11 @@ alter table user rename column tag to tags;
 
 alter table user add column tag json;
 alter table user rename column tag to tags;
-alter table user modify tags varchas(255)
+alter table user modify tags varchas(255);
+
+
+alter table user add column tags json;
+alter table user modify tags varchar(255);
+alter table user rename column tags to tag;
+
 
