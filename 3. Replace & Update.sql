@@ -21,3 +21,7 @@ replace (age) values (20) where id = 1;
 insert into user (id) values (1);
 replace into user (id) values (1);
 update user set id =1;
+
+insert into user (id) values (1);
+replace into user (id) values (1);
+upadte user set id = 1, name = 'Tom' where id = 22;
