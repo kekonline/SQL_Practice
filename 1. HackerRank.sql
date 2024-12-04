@@ -131,3 +131,40 @@ SELECT SUM(POPULATION)
 FROM CITY
 WHERE COUNTRYCODE = 'JPN';
 
+SELECT (MAX(POPULATION)-MIN(POPULATION))
+FROM CITY;
+
+SELECT CEIL((SELECT AVG(Salary)
+FROM EMPLOYEES
+WHERE Salary <> 0) - AVG(CAST(REPLACE(Salary, '0', '') AS UNSIGNED)))
+FROM EMPLOYEES;
+
+SELECT MAX(total_earnings) AS max_earnings, 
+       COUNT(*) AS employee_count
+FROM (
+    SELECT employee_id, (months * salary) AS total_earnings
+    FROM Employee
+) AS earnings
+WHERE total_earnings = (
+    SELECT MAX(months * salary)
+    FROM Employee
+);
+
+SELECT ROUND(SUM(LAT_N),2), ROUND(SUM(LONG_W),2)
+FROM STATION;
+
+SELECT ROUND(SUM(LAT_N), 4)
+FROM STATION
+WHERE LAT_N > 38.7880
+AND LAT_N < 137.2345;
+
+SELECT MAX(ROUND(LAT_N,4))
+FROM STATION
+WHERE LAT_N < 137.2345;
+
+SELECT ROUND(LONG_W,4)
+FROM STATION 
+WHERE LAT_N = (SELECT MAX(LAT_N)
+              FROM STATION
+              WHERE LAT_N < 137.2345);
+              

@@ -40,6 +40,10 @@ alter table user add column tag varchas(255);
 alter table user modify tag json;
 alter table user rename column tag to tags;
 
-alter table user add cloum tag varchar(255);
-alter table user modify tas json;
+alter table user add cloumn tag varchar(255);
+alter table user modify tag json;
 alter table user rename column taf to tags;
+
+alter table user add column tag varchar(255);
+alter table user modify tag json;
+alter table user rename tg to tags;
