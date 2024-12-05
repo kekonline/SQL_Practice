@@ -47,3 +47,7 @@ alter table user rename column taf to tags;
 alter table user add column tag varchar(255);
 alter table user modify tag json;
 alter table user rename tg to tags;
+
+alter table user add column tag varchar(255);
+alter table user modify column tag json;
+alter table user rename column tag to tags;

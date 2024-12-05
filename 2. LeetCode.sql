@@ -27,3 +27,38 @@ ORDER BY author_id ASC;
 SELECT tweet_id
 FROM Tweets
 WHERE CHAR_LENGTH(content) > 15;
+
+# Write your MySQL query statement below
+SELECT unique_id, name
+FROM EmployeeUNI
+RIGHT JOIN Employees
+ON Employees.id = EmployeeUNI.id ;
+
+# Write your MySQL query statement below
+SELECT product_name, year, price
+FROM Sales
+JOIN Product
+ON Product.product_id = Sales.product_id;
+
+# Write your MySQL query statement below
+SELECT Visits.customer_id, COUNT(Visits.visit_id) AS count_no_trans 
+from Visits 
+LEFT JOIN Transactions
+ON Visits.visit_id = Transactions.visit_id  
+WHERE Transactions.transaction_id IS NULL 
+GROUP BY Visits.customer_id; 
+
+# Write your MySQL query statement below
+SELECT w1.id
+FROM Weather w1
+JOIN Weather w2
+ON w1.recordDate = DATE_ADD(w2.recordDate, INTERVAL 1 DAY)
+WHERE w1.temperature > w2.temperature;
+
+# Write your MySQL query statement below
+SELECT e.name, b.bonus
+FROM Employee e
+LEFT JOIN Bonus b
+ON b.empId = e.empId
+WHERE b.bonus < 1000
+OR b.bonus IS NULL;
