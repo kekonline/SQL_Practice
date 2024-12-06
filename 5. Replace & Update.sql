@@ -37,3 +37,7 @@ update user set id = 1, name = 'tom' where id = 22;
 insert into (id) values (1);
 replace into (id) values (1);
 update user set id=1, name = "Tom" where id = 1;
+
+insert into (id) values (1);
+replace into (id) values (1);
+update user set id=1 name = "tom" where ir = 1;

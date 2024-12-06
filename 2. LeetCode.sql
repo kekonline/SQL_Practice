@@ -62,3 +62,18 @@ LEFT JOIN Bonus b
 ON b.empId = e.empId
 WHERE b.bonus < 1000
 OR b.bonus IS NULL;
+
+# Write your MySQL query statement below
+SELECT id, movie, description, rating
+FROM Cinema
+WHERE description <> "boring"
+AND id % 2 <> 0
+ORDER BY rating DESC;
+
+SELECT u.product_id, COALESCE(ROUND(SUM(p.price*u.units)/SUM(u.units),2),0) AS average_price
+FROM UnitsSold u
+INNER JOIN Prices p 
+ON u.product_id = p.product_id
+AND u.purchase_date BETWEEN p.start_date AND p.end_date
+AND u.units <> 0
+GROUP BY u.product_id;
